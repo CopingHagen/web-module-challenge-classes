@@ -139,7 +139,7 @@ class Instructor extends Lambdasian {
     console.log(`Today we are learning about ${subject}`);
   }
   grade(student){
-    console.log(`${student.name} receives a perfect score on {subject}`);
+    console.log(`${student.name} receives a perfect score on ${subject}`);
   }
 }
 
@@ -167,7 +167,13 @@ class Student extends Lambdasian{
     this.favSubjects = object.favSubjects;
    }
    listSubjects() {
-      console.log()
+      console.log(`Loving ${this.favSubjects}!`)
+   }
+   PRAssignment(subject) {
+      console.log(`${this.name} has submitted a PR for ${subject}`)
+   }
+   springChallenge(subject){
+      console.log(`${this.name} has begun sprint challenge on ${subject}`)
    }
 }
 
@@ -185,8 +191,12 @@ class Student extends Lambdasian{
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager {
-   
+class ProjectManager extends Instructor {
+  constructor(object){
+    super(object);
+    this.gradClassName = object.gradClassName;
+    this.favInstructor = object.favInstructor;
+   }
 }
 
 /*
