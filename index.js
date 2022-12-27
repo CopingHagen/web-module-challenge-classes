@@ -136,10 +136,10 @@ class Instructor extends Lambdasian {
     this.catchPhrase = object.catchPhrase;
   }
   demo(subject){
-    console.log(`Today we are learning about ${subject}`)
+    console.log(`Today we are learning about ${subject}`);
   }
   grade(student){
-    console.log(`${student.name} receives a perfect score on {subject}`)
+    console.log(`${student.name} receives a perfect score on {subject}`);
   }
 }
 
@@ -159,8 +159,16 @@ class Instructor extends Lambdasian {
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student {
-   
+class Student extends Lambdasian{
+  constructor(object){
+    super(object)
+    this.previousBackground = object.previousBackground;
+    this.className = object.className;
+    this.favSubjects = object.favSubjects;
+   }
+   listSubjects() {
+      console.log()
+   }
 }
 
 /*
