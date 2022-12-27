@@ -151,7 +151,7 @@ class Instructor extends Lambdasian {
   demo(subject){
     return `Today we are learning about ${subject}`;
   }
-  grade(student){
+  grade(student, subject){
     return `${student.name} receives a perfect score on ${subject}`;
   }
 }
@@ -180,14 +180,15 @@ class Student extends Lambdasian{
     this.favSubjects = object.favSubjects;
    }
    listSubjects() {
-      console.log(`Loving ${this.favSubjects}!`)
+      return `Loving ${this.favSubjects}!`
    }
    PRAssignment(subject) {
-      console.log(`${this.name} has submitted a PR for ${subject}`)
+      return `${this.name} has submitted a PR for ${subject}`
    }
-   springChallenge(subject){
-      console.log(`${this.name} has begun sprint challenge on ${subject}`)
+   sprintChallenge(subject){
+      return `${this.name} has begun sprint challenge on ${subject}`
    }
+
 }
 
 /*
@@ -209,6 +210,12 @@ class ProjectManager extends Instructor {
     super(object);
     this.gradClassName = object.gradClassName;
     this.favInstructor = object.favInstructor;
+   }
+   standUp(channel){
+    return `${this.name} announces to ${channel}, @channel standby times!`
+   }
+   debugsCode(student, subject){
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
    }
 }
 
